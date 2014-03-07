@@ -1,7 +1,7 @@
 phonegap-plugin-dirsize
 =======================
 
-This PhoneGap plugin allows you to get directory size.
+This PhoneGap plugin allows you to get SDCard directory size.
 
  > only support android platfrom
 
