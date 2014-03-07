@@ -4,37 +4,28 @@
         id="so.doo.app.plugins.dirsize"
         version="1.0">
 
-  <name>dirsize</name>
+    <name>dirsize</name>
+    <description>dirsize</description>
+    <license>MIT</license>
+    <keywords>dirsize</keywords>
+ 
 
-  <description>
-    This plugin allows you to get directory size.
-    This is the PhoneGap 3.x version.
-  </description>
+    <js-module src="www/DirSize.js" name="DirSize">
+        <clobbers target="window.plugins.dirsize" />
+    </js-module>
+                
 
-  <license>MIT</license>
-
-  <engines>
-    <engine name="cordova" version=">=3.0.0"/>
-  </engines>
-
-  <js-module src="www/DirSize.js" name="DirSize">
-    <clobbers target="window.plugins.dirsize" />
-  </js-module>
-
-  <!-- android -->
-  <platform name="android">
-
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="DirSize">
-        <param name="android-package" value="so.doo.app.plugins.DirSize" />
-      </feature>
-    </config-file>
-
-    <config-file target="AndroidManifest.xml" parent="/manifest">
-      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    </config-file>
-
-    <source-file src="src/android/so/doo/app/plugins/DirSize.java" target-dir="src/so/doo/app/plugins"/>
-  </platform>
+    <!-- android -->
+    <platform name="android">
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="DirSize">
+          <param name="android-package" value="so.doo.app.plugins.DirSize" />
+        </feature>
+      </config-file>
+      <config-file target="AndroidManifest.xml" parent="/manifest">
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      </config-file>
+      <source-file src="src/android/so/doo/app/plugins/DirSize.java" target-dir="src/so/doo/app/plugins"/>
+    </platform>
 
 </plugin>
