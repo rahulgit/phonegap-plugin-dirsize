@@ -1,6 +1,11 @@
 package so.doo.app.plugins;
 
 import android.os.Environment;
+import java.io.File;
+import java.text.DecimalFormat;
+
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
 
 public class DirSize extends CordovaPlugin {
 
@@ -15,12 +20,20 @@ public class DirSize extends CordovaPlugin {
 
 		if(format) {
 			return format(size);
-		} else return size;
+		} else return ""+size;
 	}
 
 	public Long count(String dirPath) {
 
 		File dir = getDir(dirPath);
+
+		long size = getFolderSize(dir);
+		
+		return size;
+	}
+
+	public long getFolderSize(File dir) {
+
 		long size = 0;
 		for (File file : dir.listFiles()) {
 		    if (file.isFile()) {
