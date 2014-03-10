@@ -29,16 +29,13 @@ dirsize.js is brought in automatically. There is no need to change or add anythi
 
 js
 
-    function size(path) {
-        console.log(window.plugins.dirsize.size(path));
-    }
+    var path = 'imgcache';
+    window.dirsize.size(path, function(size) {
+        console.log(size); // output 1048576
+    });
 
-    function formatSize(path) {
-        console.log(window.plugins.dirsize.formatSize(path));
-    }
-
-    var path = '/';
-    size(path);       // output 1048576
-    formatSize(path); // output 1MB
+    window.dirsize.formatSize(path, function(size) {
+        console.log(size); // output 1MB
+    });
 
 #### Have a nice day!
