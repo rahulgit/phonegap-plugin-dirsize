@@ -9,15 +9,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import android.os.Environment;
-<<<<<<< HEAD:src/android/DirSize.java
 import android.util.Log;
-=======
-import java.io.File;
-import java.text.DecimalFormat;
-
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaPlugin;
->>>>>>> b4e994503dfec312899713e91df5c67319f3ceee:src/android/DirSize.java
 
 public class DirSize extends CordovaPlugin {
 	

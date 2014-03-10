@@ -7,13 +7,9 @@
     <engines>
         <engine name="cordova" version=">=3.0.0" />
     </engines>
-<<<<<<< HEAD
+
     <js-module src="www/dirsize.js" name="DirSize">
         <clobbers target="dirsize" />
-=======
-    <js-module src="www/DirSize.js" name="DirSize">
-        <clobbers target="window.plugins.dirsize" />
->>>>>>> b4e994503dfec312899713e91df5c67319f3ceee
     </js-module>
 
     <!-- android -->
