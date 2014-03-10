@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        id="so.doo.app.plugins.dirsize"
-        version="1.0">
-
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="dirsize" version="1.0">
     <name>dirsize</name>
+    <author>weelion</author>
     <description>dirsize</description>
-    <license>MIT</license>
-    <keywords>dirsize</keywords>
- 
-
-    <js-module src="www/DirSize.js" name="DirSize">
-        <clobbers target="window.plugins.dirsize" />
+    <keywords>cordova, dirsize</keywords>
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    <js-module src="www/dirsize.js" name="DirSize">
+        <clobbers target="dirsize" />
     </js-module>
-                
 
     <!-- android -->
     <platform name="android">
-      <config-file target="res/xml/config.xml" parent="/*">
-        <feature name="DirSize">
-          <param name="android-package" value="so.doo.app.plugins.DirSize" />
-        </feature>
-      </config-file>
-      <config-file target="AndroidManifest.xml" parent="/manifest">
-        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-      </config-file>
-      <source-file src="src/android/so/doo/app/plugins/DirSize.java" target-dir="src/so/doo/app/plugins"/>
+        <config-file target="config.xml" parent="/*">
+            <feature name="DirSize">
+                <param name="android-package" value="so.doo.app.plugins.DirSize" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+        <source-file src="src/android/DirSize.java" target-dir="src/so/doo/app/plugins" />
     </platform>
-
 </plugin>

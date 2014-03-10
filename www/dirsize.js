@@ -1,18 +1,24 @@
-function DirSize() {}
 
+var exec = require("cordova/exec");
 
-DirSize.prototype.getSize = function(dir, successCallback, errorCallback) {
-	cordova.exec(successCallback, errorCallback, "DirSize", "getSize", [dir]);
-}
-
-
-DirSize.install = function () {
-  if (!window.plugins) {
-    window.plugins = {};
-  }
-
-  window.plugins.dirsize = new DirSize();
-  return window.plugins.dirsize;
+var DirSize = function () {
+    this.name = "DirSize";
 };
 
-cordova.addConstructor(DirSize.install);
+DirSize.prototype.size = function (dir, func) {
+	if (!dir) {
+        return;
+    }
+
+	exec(func, null, "DirSize", "size", [dir]);
+};
+
+DirSize.prototype.formatSize = function (dir, func) {
+	if (!dir) {
+        return;
+    }
+
+	exec(func, null, "DirSize", "formatSize", [dir]);
+};
+
+module.exports = new DirSize();
