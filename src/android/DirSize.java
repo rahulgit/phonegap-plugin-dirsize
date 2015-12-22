@@ -1,4 +1,4 @@
-package so.doo.app.plugins;
+package com.vizru.plugins;
 
 import java.io.File;
 import java.text.DecimalFormat;
@@ -39,8 +39,7 @@ public class DirSize extends CordovaPlugin {
 		return size;
 	}
 
-	// 222211322211122111
-	public String getSize(String dirPath, boolean format) {
+ 	public String getSize(String dirPath, boolean format) {
 
 		long size = count(dirPath);
 		
