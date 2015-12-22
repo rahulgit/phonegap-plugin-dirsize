@@ -13,7 +13,7 @@ DirSize.prototype.size = function (dir, func) {
 
 DirSize.prototype.formatSize = function (dir, func) {
 	if (!dir) {
-        return;
+        return 'notDir';
     }
 
 	exec(func, null, "DirSize", "formatSize", [dir]);
