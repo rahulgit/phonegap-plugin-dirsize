@@ -16,12 +16,12 @@
     <platform name="android">
         <config-file target="config.xml" parent="/*">
             <feature name="DirSize">
-                <param name="android-package" value="so.doo.app.plugins.DirSize" />
+                <param name="android-package" value="com.vizru.plugins.DirSize" />
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         </config-file>
-        <source-file src="src/android/DirSize.java" target-dir="src/so/doo/app/plugins" />
+        <source-file src="src/android/DirSize.java" target-dir="src/com/vizru/plugins" />
     </platform>
 </plugin>
