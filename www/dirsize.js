@@ -1,13 +1,11 @@
-
 var exec = require("cordova/exec");
-
 var DirSize = function () {
     this.name = "DirSize";
 };
 
 DirSize.prototype.size = function (dir, func) {
 	if (!dir) {
-        return;
+        return 'notDir';
     }
 
 	exec(func, null, "DirSize", "size", [dir]);
